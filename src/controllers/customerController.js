@@ -1,5 +1,5 @@
 const controller = {};//Objeto
-
+var int = 7;
 controller.list = (req, res) => { //Función que manda el hello world
    req.getConnection((err, conn) => {
        conn.query('SELECT * FROM customer', (err, customers) =>{
@@ -9,7 +9,7 @@ controller.list = (req, res) => { //Función que manda el hello world
                 res.json(err);
             }
             
-            res.render('customers', { //prueba
+            res.render('customers', { 
                 data: customers
             });
        });
