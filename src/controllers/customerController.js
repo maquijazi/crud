@@ -9,7 +9,7 @@ controller.list = (req, res) => { //Función que manda el hello world
                 res.json(err);
             }
             
-            res.render('customers', {
+            res.render('customers', { //prueba
                 data: customers
             });
        });
